@@ -33,5 +33,4 @@ for filename in *.zip; do
 	cd ..
 	mv $filename/"$filename""_eval_results.txt" $filename/"$filename""_stats.txt" results
 	rm -r $filename
-	rm -r inverted_indexes/$filename
 done
