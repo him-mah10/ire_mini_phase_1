@@ -20,7 +20,7 @@ for filename in *.zip; do
 	mv invertedindex_stat.txt "$filename""_stats.txt"
 	
 	cat ../queries.txt | while read query; do
-		bash search.sh ../inverted_indexes/$filename $query >> "$filename""_eval_results.txt"
+		bash search.sh ../inverted_indexes/$filename "$query" >> "$filename""_eval_results.txt"
 	done
 
 	echo " " >> "$filename""_eval_results.txt"
